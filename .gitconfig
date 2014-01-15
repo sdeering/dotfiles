@@ -1,10 +1,29 @@
+[user]
+        email = samdeering@gmail.com
+        name = sdeering
+[merge]
+        tool = kdiff3
+[mergetool "kdiff3"]
+        path = c:/Program Files/KDiff3/kdiff3.exe
+[diff]
+        tool = kdiff3
+        guitool = kdiff3
+[difftool "kdiff3"]
+        path = c:/Program Files/KDiff3/kdiff3.exe
 [alias]
-	c = commit -am
-	up = pull
-	p = push
-	s = status -s
-	df = diff --color --color-words --abbrev
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    st = status -s
+    ci = commit -am
+    up = pull
+    p = push
+    br = branch
+    co = checkout
+    df = df = diff --color --color-words --abbrev
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    dc = diff --cached
+    ls = ls-files
+
+    # Show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
 [color]
 	ui = always
 [apply]
@@ -26,8 +45,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[merge]
-	log = true
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -43,5 +60,5 @@
 
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-[url "git@github.com:addyosmani/"]
-  insteadOf = "git://github.com/addyosmani/"
+[url "git@github.com:sdeering/"]
+  insteadOf = "git://github.com/sdeering/"
